@@ -108,6 +108,8 @@ int main(int argc,char **argv)
         cout<<"Memory needed to store addressing for ids "<<sizeof(IDTYPE)*opt.MaxIDValue/1024./1024.0/1024.0<<"GB, maximum ID of "<<opt.MaxIDValue<<endl;
         if (opt.imerittype==MERITRankWeightedBoth) cout<<" And also need similar amount of memory to store ranking information needed by merit"<<endl;
     }
+
+
     if(opt.isearchdirection!=SEARCHDESCEN) {
         //then allocate simple array used for accessing halo ids of particles through their IDs
         pfofp=new unsigned int[opt.MaxIDValue];

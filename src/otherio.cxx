@@ -30,7 +30,7 @@ HaloData *ReadHaloData(string &infile, Int_t &numhalos)
 #endif
       double e,x,y,z,vx,vy,vz;
       for(j=0; j<Halo[i].NumberofParticles; j++){
-        fscanf(f, "%ld %f %f %f %f %f %f %f",
+        fscanf(f, "%lld %lf %lf %lf %lf %lf %lf %lf",
                &(Halo[i].ParticleID[j]),
                &e,&x,&y,&z,&vx,&vy,&vz
              );
@@ -80,7 +80,7 @@ HaloData *ReadNIFTYData(string &infile, Int_t &numhalos, int idcorrectflag, int 
 #endif
       ncount=0;
       for(j=0; j<Halo[i].NumberofParticles; j++){
-        fscanf(f, "%ld %d",
+        fscanf(f, "%lld %d",
                &idval,&type
                );
            if (type==NIFTYDMTYPE) {

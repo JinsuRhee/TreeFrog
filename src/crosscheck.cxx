@@ -313,6 +313,7 @@ int CrossMatchProgenitorIndividual(Options &opt, Int_t i,
     //if the number shared is zero, do nothing
     else {p1[i].ProgenitorList=NULL;p1[i].Merit=NULL;}
 
+
     //if matching core to core
     if (opt.icorematchtype==PARTLISTCORECORE && opt.particle_frac<1 && opt.particle_frac>0 && numshared>0) {
         //calculate number of particles
